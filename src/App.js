@@ -2,19 +2,35 @@ import logo from './logo.svg';
 import './App.css';
 
 const number = 5555;
-const singer = {Name: 'Dr. Mahfuz',job: 'singer'}
+const singers = [
+  {Name: 'Dr. Mahfuz',job: 'singer'},
+  {Name: 'Dr. lapuz',job: 'singer1'},
+  {Name: 'Dr. dafuz',job: 'singer2'},
+  {Name: 'Dr. kafuz',job: 'singer3'}
+]
 const singerStyle = {
   color: 'purple',
   backgroundColor : 'white',
   
 }
 function App() {
-  
+  const nayoks = ['mohammed','zia', 'bahadur','tuhin'];
   return (
     <div className="App">
-    <Person name='Zia'naiyka= 'Arju' job= 'Buisnessman'></Person>
+
+   {
+    nayoks.map(nayok => <li>{nayok}</li>)
+   }  
+   {/* {
+    nayoks.map(nayok => <Person name={nayok}></Person>)
+   } */}
+   {
+    singers.map(singer=><Person name={singer.Name}></Person>)
+   }
+
+    {/* <Person name={nayoks[0]} naiyka= 'Arju' job= 'Buisnessman'></Person>
     <Person name='Bahadur'></Person>
-    <Person></Person>
+    <Person></Person> */}
    
     <Friend></Friend>
     <Friend></Friend>
